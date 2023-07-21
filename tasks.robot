@@ -86,3 +86,4 @@ Store the order receipt as PDF file
 Creat ZIP for PDF files
     Archive Folder With Zip     ${FPD_FILES_TEMP_DIRECTORY}    ${OUTPUT_DIR}${/}Orders.zip
     Remove Directory    ${FPD_FILES_TEMP_DIRECTORY}    ${True}
+    Log    test git config
