@@ -16,7 +16,7 @@ Library    RPA.Archive
 *** Variables ***
 ${CSV_DOWNLOAD_PATH}=    ${OUTPUT_DIR}${/}orders.csv
 ${FPD_FILES_TEMP_DIRECTORY}=    ${CURDIR}${/}temp
-${GLOBAL_RETRY_AMOUNT}=    3x
+${GLOBAL_RETRY_AMOUNT}=    5x
 ${GLOBAL_RETRY_INTERVAL}=    0.5s
 
 *** Tasks ***
@@ -86,4 +86,3 @@ Store the order receipt as PDF file
 Creat ZIP for PDF files
     Archive Folder With Zip     ${FPD_FILES_TEMP_DIRECTORY}    ${OUTPUT_DIR}${/}Orders.zip
     Remove Directory    ${FPD_FILES_TEMP_DIRECTORY}    ${True}
-    Log    test git config
